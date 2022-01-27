@@ -1,0 +1,33 @@
+<div class="input-group col-md-12">
+   
+   
+    <div class="col-md-2">
+        <input [(ngModel)]="user.name" type="text" class="form-control" placeholder="Inserisci il nome" >
+    </div>
+   
+    <div class="col-md-2">
+        <input [(ngModel)]="user.username" type="text" class="form-control" placeholder="Inserisci l'username">
+
+    </div>
+   
+    <div class="col-md-2">
+        <input [(ngModel)]="user.email" type="email" class="form-control" placeholder="Inserisci la mail">
+
+    </div>
+    
+    <div class="col-md-2">
+        <input [(ngModel)]="user.phone" type="text" class="form-control" placeholder="Inserisci il numero di telefono">
+
+    </div>
+    
+    <div class="col-md-2">
+        <input [(ngModel)]="user.website" type="text" class="form-control" placeholder="Inserisci il tuo website">
+
+    </div>
+
+    <div class="col-md-2">
+        <button type="button" class="btn btn-dark  btn-sm mt-2" (click)="createUser()">Create</button>
+    </div>
+</div>
+
+

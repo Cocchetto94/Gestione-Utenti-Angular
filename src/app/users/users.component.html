@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="col-md-12">
+        <h1>Lista Users</h1>
+        <app-create-input (userCreate)="onCreateUser($event)"></app-create-input>
+        <div class="row">
+            <div class="col-sm">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Username</th>
+                            <th scope="col">E-mail</th>
+                            <th scope="col">Phone</th>
+                            <th scope="col">Website</th>
+                            <th scope="col">Elimina</th>
+                            <th scope="col">Modifica</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr app-user *ngFor="let user of users" [user]="user" (userDelete)="onDeleteUser($event)"
+                            (userUpdate)="onUpdateUser($event)">
+                            <!-- <app-user [user] = "user"></app-user>  binding -->
+                        </tr>
+
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-sm" *ngIf="updateForm">
+                <app-update-input [userUpdate]="user" (userSaveUpdate)="onUserSaveUpdate($event)"></app-update-input>
+            </div>
+        </div>
+    </div>
+</div>
